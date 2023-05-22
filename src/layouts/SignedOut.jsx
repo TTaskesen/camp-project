@@ -5,8 +5,8 @@ export default function SignedOut(probs) {
   return (
     <div>
         <Menu.Item>
-            <Button onClick={probs.signIn} primary >Giriş Yap</Button>
-            <Button  style={{marginLeft:"0.5em"}} primary>Kayıt Ol</Button>
+            <Button onClick={probs.signIn} color="red" >Giriş Yap</Button>
+            <Button  style={{marginLeft:"0.5em"}} color="olive">Kayıt Ol</Button>
         </Menu.Item>
         
     </div>

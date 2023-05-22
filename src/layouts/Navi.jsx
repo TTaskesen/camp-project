@@ -19,13 +19,13 @@ export default function Navi() {
   return (
     <div>
       <Menu inverted fixed="top">
-        <Container>
+        <Container >
           <Menu.Item name="home" />
           <Menu.Item name="messages" />
 
           <Menu.Menu position="right">
             <CartSummary/>
-            {isAuthenticated?<SignedIn signOut={handleSignOut}/>:<SignedOut signIn={handleSignIn}/>}
+            {isAuthenticated?<SignedIn signOut={handleSignOut} bisey="1"/>:<SignedOut signIn={handleSignIn}/>}
           </Menu.Menu>
         </Container>
       </Menu>
