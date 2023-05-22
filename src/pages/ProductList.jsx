@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Icon, Menu, Table } from "semantic-ui-react";
 import ProductService from "../services/productService";
+import { Link } from "react-router-dom";
 
 export default function ProductList() {//hook tekniği
   
@@ -30,7 +31,7 @@ export default function ProductList() {//hook tekniği
         <Table.Body>
           {products.map((product) => (
             <Table.Row key={product.id}>
-              <Table.Cell>{product.productName}</Table.Cell>
+              <Table.Cell><Link to={`/products/${product.productName}`}>{product.productName}</Link></Table.Cell>
               <Table.Cell>{product.unitPrice}</Table.Cell>
               <Table.Cell>{product.unitsInStock}</Table.Cell>
               <Table.Cell>{product.quantityPerUnit}</Table.Cell>
