@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { configureStore } from "./store/configureStore";
+import "react-toastify/dist/ReactToastify.min.css"
 
 const store = configureStore()
 
@@ -14,8 +15,8 @@ ReactDOM.render(
     <BrowserRouter>
         <App />
     </BrowserRouter>
-</Provider>    
-    , document.getElementById("root"));
+</Provider>,
+    document.getElementById("root"));
 
 
 // If you want to start measuring performance in your app, pass a function

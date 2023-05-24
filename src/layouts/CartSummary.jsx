@@ -12,7 +12,7 @@ export default function CartSummary() {
         <Dropdown.Menu>
           {
             cartItems.map((cartItem)=>(
-              <Dropdown.Item>
+              <Dropdown.Item >
                 {cartItem.product.productName}
                 <Label>
                   {cartItem.quantity}
@@ -20,10 +20,8 @@ export default function CartSummary() {
               </Dropdown.Item>
             ))
           }
-          
-          
           <Dropdown.Divider/>
-          <Dropdown.Item as={NavLink} to="/cart">Spete Git</Dropdown.Item>
+          <Dropdown.Item as={NavLink} to="/cart">Sepete Git</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>
