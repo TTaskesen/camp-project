@@ -1,7 +1,8 @@
-import { Form, Formik } from 'formik'
+import {   Form, Formik } from 'formik'
 import React from 'react'
 import * as Yup from "yup";
-import { FormField } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
+import TaskesenTextInput from '../utilities/customFormControls/TaskesenTextInput';
 
 export default function ProductAdd() {
 
@@ -11,23 +12,26 @@ export default function ProductAdd() {
         unitPrice: Yup.number().required("ürün fiyatı zorunlu")
     })
     return (
-        <div>
+        
             <Formik
                 initialValues={initialValues}
                 validationSchema={schema}
+                onSubmit={(values)=>{
+                    console.log(values)
+                }}
             >
-                <Form>
-                    <FormField>
-                        <label>First Name</label>
-                        <input placeholder='First Name' />
-                    </FormField>
-                    <FormField>
-                        <label>Last Name</label>
-                        <input placeholder='Last Name' />
-                    </FormField>
+                <Form className='ui form'>
+                    <TaskesenTextInput name="productName" placeholder="Ürün Adı"/>
+                    <TaskesenTextInput name="unitPrice" placeholder="Ürün Fiyatı"/>
+                    
+                    {/* <FormField>
+                        <Field name="unitPrice" placeholder="Ürün Fiyatı"></Field>
+                        <ErrorMessage name='unitPrice' render={error=>
+                            <Label pointing basic color='red' content={error}></Label>
+                        }></ErrorMessage>
+                    </FormField> */}
+                    <Button color='green' type='submit'>E  K  L  E</Button>
                 </Form>
-
             </Formik>
-        </div>
     )
 }
